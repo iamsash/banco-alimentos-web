@@ -95,3 +95,48 @@ if (btnMenu && dropdownMenu) {
         }
     });
 }
+
+// Lista de imágenes
+const imagenes = [
+  "img/aliado1.png",
+  "img/aliado2.png",
+  "img/aliado3.png",
+  "img/aliado4.png"
+];
+
+const imagenAliado = document.getElementById("imagenAliado");
+const barraProgreso = document.getElementById("barraProgreso");
+
+let indiceActual = 0;
+let progreso = 0;
+const duracion = 5000; // 5 segundos
+const intervalo = 50;  // actualización de barra cada 50ms
+
+function cambiarImagen() {
+  // efecto fade out
+  imagenAliado.classList.add("fade-out");
+
+  setTimeout(() => {
+    indiceActual = (indiceActual + 1) % imagenes.length;
+    imagenAliado.src = imagenes[indiceActual];
+    imagenAliado.classList.remove("fade-out");
+  }, 600);
+}
+
+function iniciarSlider() {
+  setInterval(() => {
+    cambiarImagen();
+    progreso = 0;
+    barraProgreso.style.width = "0%";
+  }, duracion);
+
+  setInterval(() => {
+    progreso += (intervalo / duracion) * 100;
+
+    if (progreso <= 100) {
+      barraProgreso.style.width = progreso + "%";
+    }
+  }, intervalo);
+}
+
+iniciarSlider();
