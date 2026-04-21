@@ -96,7 +96,6 @@ if (btnMenu && dropdownMenu) {
     });
 }
 
-
 // Lista de imágenes sobre los aliados 
 const imagenes = [
 
@@ -148,3 +147,126 @@ function iniciarSlider() {
 }
 
 iniciarSlider();
+
+
+// imagenes de los reportes
+const images = [
+  "img.inicio/portada.png",
+  "img.inicio/gratamente.png",
+  "img.inicio/historico.png",
+  "img.inicio/historico_rescate_anual.png",
+  "img.inicio/rescate_de_alimentos.png",
+  "img.inicio/rescate_mensual_23.png"
+];
+
+const sliderPrincipal = document.getElementById("sliderPrincipal");
+const sliderImage = document.getElementById("sliderImage");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const indicators = document.querySelectorAll(".indicator");
+
+let currentIndex = 0;
+let autoSlide;
+
+/* Mostrar imagen actual */
+function showImage(index) {
+  if (!sliderImage) return;
+
+  sliderImage.classList.add("fade-out");
+
+  setTimeout(() => {
+    sliderImage.src = images[index];
+    sliderImage.classList.remove("fade-out");
+    updateIndicators();
+  }, 300);
+}
+
+/* Actualizar indicadores */
+function updateIndicators() {
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle("active", i === currentIndex);
+  });
+}
+
+/* Siguiente imagen */
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}
+
+/* Imagen anterior */
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+}
+
+/* Auto slide cada 5 segundos */
+function startAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => {
+    nextImage();
+  }, 5000);
+}
+
+/* Reiniciar auto slide cuando se toca manualmente */
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
+
+/* Eventos botones */
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    nextImage();
+    resetAutoSlide();
+  });
+}
+
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    prevImage();
+    resetAutoSlide();
+  });
+}
+
+/* Eventos indicadores */
+indicators.forEach((indicator) => {
+  indicator.addEventListener("click", () => {
+    currentIndex = parseInt(indicator.dataset.index);
+    showImage(currentIndex);
+    resetAutoSlide();
+  });
+});
+
+/* Mostrar u ocultar slider según la sección activa */
+function controlarSlider() {
+  const inicio = document.getElementById("inicio");
+
+  if (!inicio || !sliderPrincipal) return;
+
+  if (inicio.classList.contains("activa")) {
+    sliderPrincipal.style.display = "block";
+    startAutoSlide();
+  } else {
+    sliderPrincipal.style.display = "none";
+    clearInterval(autoSlide);
+  }
+}
+
+/* Iniciar */
+showImage(currentIndex);
+controlarSlider();
+
+/* Observar cambios de clase en la sección inicio */
+const inicioSection = document.getElementById("inicio");
+
+if (inicioSection) {
+  const observer = new MutationObserver(() => {
+    controlarSlider();
+  });
+
+  observer.observe(inicioSection, {
+    attributes: true,
+    attributeFilter: ["class"]
+  });
+}
