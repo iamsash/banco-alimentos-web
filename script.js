@@ -98,14 +98,12 @@ if (btnMenu && dropdownMenu) {
 
 // Lista de imágenes sobre los aliados 
 const imagenes = [
-
- "logo.png/el_asador.jpg",
+  "logo.png/asadorimg.jpg",
  "logo.png/caritas_del_peru.jpg",
- "logo.png/grupo_huamani.jpg",
- "logo.png/plaza_vea.jpg",
+ "logo.png/huamanigroup.jpg",
  "logo.png/churrasqueria.jpg",
- "logo.png/aereopuerto.webp",
- "logo.png/artesanos_don_bosco.webp",
+ "logo.png/aereopuerto.jpg",
+ "logo.png/artesanos_don_bosco.jpg",
  "logo.png/oratoria_don_bosco.jpg",
  "logo.png/sunshine.jpg",
  "logo.png/calidez_andina.jpg",
@@ -157,6 +155,7 @@ const images = [
   "img.inicio/historico_rescate_anual.png",
   "img.inicio/rescate_de_alimentos.png",
   "img.inicio/rescate_mensual_23.png"
+
 ];
 
 const sliderPrincipal = document.getElementById("sliderPrincipal");
