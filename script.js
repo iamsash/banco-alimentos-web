@@ -96,12 +96,20 @@ if (btnMenu && dropdownMenu) {
     });
 }
 
-// Lista de imágenes
+
+// Lista de imágenes sobre los aliados 
 const imagenes = [
-  "img/aliado1.png",
-  "img/aliado2.png",
-  "img/aliado3.png",
-  "img/aliado4.png"
+
+ "logo.png/el_asador.jpg",
+ "logo.png/caritas_del_peru.jpg",
+ "logo.png/grupo_huamani.jpg",
+ "logo.png/plaza_vea.jpg",
+ "logo.png/churrasqueria.jpg",
+ "logo.png/aereopuerto.webp",
+ "logo.png/artesanos_don_bosco.webp",
+ "logo.png/oratoria_don_bosco.jpg",
+ "logo.png/sunshine.jpg",
+ "logo.png/calidez_andina.jpg",
 ];
 
 const imagenAliado = document.getElementById("imagenAliado");
