@@ -413,30 +413,29 @@ body {
 #mision .quienes-somos-title,
 #vision .quienes-somos-title,
 #donacion-impuestos .quienes-somos-title {
-  border: 2px solid #ff8c00;
-  border-radius: 0;
-  padding: 18px 24px;
+
   background: #ff8c00;
-  width: calc(100% + 80px);
-  max-width: none;
-  margin: 0 auto 24px;
-  margin-left: -40px;
-  margin-right: -40px;
+  color: #fff;
+
+  padding: 18px 0;
   text-align: center;
-  box-sizing: border-box;
+
+  width: 100vw;              /* 🔥 ocupa toda la pantalla */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin-bottom: 24px;
+
+  border: none;
 }
 
-#quienes-somos .quienes-somos-title h2,
-#que-hacemos .quienes-somos-title h2,
-#mision .quienes-somos-title h2,
-#vision .quienes-somos-title h2,
-#donacion-impuestos .quienes-somos-title h2 {
-  margin: 0;
-  color: #ffffff;
-}
+
+
+
 
 .quienes-somos-title {
-  color: #f0a000;
+  color: #262522;
   margin-bottom: 20px;
   font-size: 28px;
 }
@@ -608,8 +607,8 @@ body {
 .donacion-box {
   width: calc(100% + 80px);
   margin-left: -40px;
-  border: 2px solid #ff8c00;
-  background: #fff8ef;
+  border: 2px solid #ff9100;
+  background: #ff9100;
   padding: 26px 40px;
   box-sizing: border-box;
 }
@@ -619,7 +618,7 @@ body {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #b35d00;
+  color: #d9710f;
 }
 
 .donar-texto {
@@ -627,7 +626,7 @@ body {
   margin: 24px auto 0;
   text-align: center;
   line-height: 1.8;
-  color: #222;
+  color: #ffffff;
 }
 
 .donar-cta {
@@ -691,6 +690,28 @@ body {
 .donar-card.donar-padrinaje {
   background: linear-gradient(135deg, #692d5b 0%, #d007af 100%);
 }
+
+
+/* parte de donacion online*/
+
+.seguimos {
+  max-width: 950px;
+  margin: 35px auto;
+  padding: 18px 28px;
+
+  background: linear-gradient(135deg, #fff3e0, #e4dfd6);
+  border-left: 6px solid #978361;
+  border-radius: 12px;
+
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
 
 /* =========================================================
    PROYECTOS / CARDS
@@ -1939,49 +1960,181 @@ body {
 /* QUIENES SOMOS */
 /* ====================================================== */
 
+
+.quienes-somos-lista {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 25px;
+
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  text-align: left;
+}
+
+/* TÍTULO */
+.quienes-somos-lista h3 {
+  text-align: center;
+  color: #a68141;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* LISTA */
+.quienes-somos-lista ol {
+  padding-left: 20px;
+}
+
+/* ITEMS */
+.quienes-somos-lista li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #333;
+  padding-left: 5px;
+
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.quienes-somos-lista li:hover {
+  color: #b04229f3;
+  transform: translateX(5px);
+}
+
+/* NUMERACIÓN BONITA */
+.quienes-somos-lista ol li::marker {
+  color: #ffa200;
+  font-weight: bold;
+}
+
+
+
 .quienes-somos {
   width: 100%;
-  padding: 60px 20px;
+  padding: 0;
   text-align: center;
 }
 
-.quienes-somos-box {
-  max-width: 850px;
-  margin: 0 auto;
+#quienes-somos {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.quienes-somos-slider {
+.quienes-somos-box,
+#quienes-somos .quienes-somos-box {
   width: 100%;
-  max-width: 750px;
-  height: 380px;
-  margin: 0 auto 40px auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#quienes-somos .quienes-somos-slider {
+  width: 95%;
+  max-width: 1500px;
+  margin: 10px auto 40px auto; /* más arriba */
   overflow: hidden;
-  border-radius: 12px;
-  border: 4px solid #f0a000;
+  border: 4px solid rgb(235, 151, 8);
+  border-radius: 18px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
-.quienes-somos-slider img {
+#quienes-somos .quienes-somos-slider img {
   width: 100%;
-  height: 100%;
+  height: 650px;
+  display: block;
   object-fit: cover;
-  transition: opacity 0.8s ease;
+  transition: transform 0.5s ease, opacity 0.8s ease;
+}
+
+
+#quienes-somos .quienes-somos-slider:hover img {
+  transform: scale(1.05);
 }
 
 .fade-out {
   opacity: 0;
 }
 
+.quienes-somos-texto {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 0;
+  box-sizing: border-box;
+}
+
 .quienes-somos-title {
-  color: #f0a000;
+  color: #ffffff;
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 2rem;
+  
 }
 
 .quienes-somos-info {
   color: #333;
   line-height: 1.8;
   font-size: 1.1rem;
+}
+
+
+/* ficha informativa */
+
+.recursos-laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}
+
+.recurso-box {
+  width: 340px;
+  min-height: 195px;
+  background: #3f51b5;
+  border-radius: 10px;
+  padding: 28px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.recurso-box h3 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 26px;
+}
+
+.recurso-fecha {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0 0 28px;
+}
+
+.btn-recurso {
+  display: inline-block;
+  background: #f4b400;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 13px 24px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-recurso:hover {
+  background: #d89d00;
+  transform: translateY(-2px);
 }
 
 /* ============================= */
@@ -2369,3 +2522,132 @@ body {
     font-size: 1.1rem;
   }
 }
+
+
+/* =========================
+   DONACIÓN POR IMPUESTOS
+========================= */
+#donacion-impuestos {
+  width: 100%;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f4fdf7, #ffffff);
+}
+
+#donacion-impuestos .contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CAJA PRINCIPAL */
+.donacion-impuestos-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 45px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* TÍTULO */
+.donacion-impuestos-title h2 {
+  font-size: 2rem;
+  color: #1f7a4f;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* línea decorativa */
+.donacion-impuestos-title h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ff8c00;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* TEXTO */
+.donacion-impuestos-info p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto 30px;
+}
+
+/* BENEFICIOS */
+.donacion-impuestos-beneficios {
+  margin: 30px 0;
+}
+
+.donacion-impuestos-beneficios h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.donacion-impuestos-beneficios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.donacion-impuestos-beneficios li {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+}
+
+/* icono tipo check */
+.donacion-impuestos-beneficios li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1f7a4f;
+  font-weight: bold;
+}
+
+/* BOTÓN */
+.donacion-impuestos-cta {
+  margin-top: 30px;
+}
+
+.btn-donar {
+  background: linear-gradient(135deg, #ff8c00, #ff6b6b);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* efecto hover */
+.btn-donar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .donacion-impuestos-box {
+    padding: 25px;
+  }
+
+  .donacion-impuestos-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .donacion-impuestos-info p {
+    font-size: 1rem;
+  }
+
+  .donacion-impuestos-beneficios h3 {
+    font-size: 1.2rem;
+  }
+}
+
+

@@ -274,3 +274,25 @@ if (inicioSection) {
 
 // las imagenes de quienes somos
 
+// Imágenes de la sección "Quiénes somos"
+const imagenesQuienesSomos = [
+  "img.quienes_somos/banco.jpg",
+  "img.quienes_somos/grupo.jpg",
+  "img.quienes_somos/frutas.jpg",
+  "img.quienes_somos/grupoo.jpg",
+  
+];
+
+const sliderQuienesSomos = document.getElementById("imagenQuienesSomos");
+let indiceQuienesSomos = 0;
+
+function cambiarImagenQuienesSomos() {
+  if (sliderQuienesSomos) {
+    sliderQuienesSomos.src = imagenesQuienesSomos[indiceQuienesSomos];
+    indiceQuienesSomos = (indiceQuienesSomos + 1) % imagenesQuienesSomos.length;
+  }
+}
+
+// Cambiar imagen cada 4 segundos
+setInterval(cambiarImagenQuienesSomos, 4000);
+
