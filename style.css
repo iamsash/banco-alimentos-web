@@ -409,30 +409,6 @@ body {
 }
 
 #quienes-somos .quienes-somos-title,
-#que-hacemos .quienes-somos-title,
-#mision .quienes-somos-title,
-#vision .quienes-somos-title,
-#donacion-impuestos .quienes-somos-title {
-
-  background: #ff8c00;
-  color: #fff;
-
-  padding: 18px 0;
-  text-align: center;
-
-  width: 100vw;              /* 🔥 ocupa toda la pantalla */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-
-  margin-bottom: 24px;
-
-  border: none;
-}
-
-
-
-
 
 .quienes-somos-title {
   color: #262522;
@@ -479,26 +455,47 @@ body {
 }
 
 /* =========================================================
+   mision y visión
+========================================================= */
+
+
+#mision-vision .info-title {
+  background: #ff8c00;
+  color: #ffffff;
+
+  padding: 8px 0; /* un poco más equilibrado */
+  text-align: center;
+
+  width: 100%; /* 🔥 mejor que 100vw */
+  
+  margin-bottom: 30px;
+
+  border: none;
+}
+
+/* 🔥 separación entre Misión y Visión */
+#mision-vision .info-box {
+  margin-bottom: 50px;
+}
+
+
+
+/* =========================================================
    QUÉ HACEMOS
 ========================================================= */
-#que-hacemos {
-  padding: 40px;
-  line-height: 1.8;
-}
+#que-hacemos .que-hacemos-title {
+  background: #ff8c00;
+  color: #ffffff;
 
-#que-hacemos h2 {
+  padding: 8px 0;
   text-align: center;
-  margin-bottom: 20px;
+
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-#que-hacemos h3 {
-  margin-top: 25px;
-  color: #d4a100;
-}
-
-#que-hacemos ul {
-  margin-top: 15px;
-  padding-left: 20px;
+#que-hacemos .que-hacemos-title h2 {
+  margin: 0;
 }
 
 /* =========================================================
@@ -2224,7 +2221,7 @@ body {
 
 #intranet {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #f5f5f5, #ffffff);
+  background: linear-gradient(135deg, #ff8c00, #bdafaf);
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -2239,13 +2236,13 @@ body {
 
 /* TITULO */
 .intranet-title {
-  background: linear-gradient(135deg, #133d22, #166134);
+  background: linear-gradient(135deg, #ff8c00, #ff8c00  );
   padding: 20px;
   text-align: center;
 }
 
 .intranet-title h2 {
-  color: #ffffff;
+  color: #f6f6f6;
   margin: 0;
   font-size: 22px;
 }
@@ -2259,7 +2256,7 @@ body {
 
 .intranet-info p {
   font-size: 14px;
-  color: #555;
+  color: #000000;
   margin-bottom: 25px;
 }
 
@@ -2281,15 +2278,15 @@ body {
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: #524828;
+  color: #ffc400;
 }
 
 .login-form input {
   width: 100%;
   padding: 12px 14px 12px 40px;
   border-radius: 10px;
-  border: 1px solid #0c0000;
-  background: #f9f9f9;
+  border: 1px solid #0b0b0b;
+  background: #fefefe;
   transition: 0.3s ease;
 }
 
@@ -2297,7 +2294,7 @@ body {
   outline: none;
   border-color: #f6b905;
   box-shadow: 0 0 0 3px rgba(30, 125, 63, 0.15);
-  background: #fff;
+  background: #0b0b0b;
 }
 
 /* OPCIONES */
@@ -2335,7 +2332,7 @@ body {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #95c5a6, #0bed65);
+  background: linear-gradient(135deg, #ff8c00, #ff8c00);
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
@@ -2344,7 +2341,8 @@ body {
 
 .btn-login:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(16, 182, 74, 0.3);
+  box-shadow: 0 6px 18px rgba(20, 176, 74, 0.3);
+  
 }
 
 /* RESPONSIVE */
