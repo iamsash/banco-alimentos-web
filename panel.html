@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Intranet</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+
+<body class="panel-page">
+
+  <script>
+    if (localStorage.getItem("logueado") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div class="dashboard">
+
+    <aside class="sidebar">
+      <h2>Banco de Alimentos</h2>
+      <p>Panel interno</p> 
+
+      <button onclick="mostrarSeccion('usuarios')">Usuarios</button>
+      <button onclick="mostrarSeccion('alimentos')">Alimentos</button>
+      <button onclick="mostrarSeccion('donaciones')">Donaciones</button>
+      <button onclick="mostrarSeccion('registros')">Ver registros</button>
+
+      <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <main class="panel-content">
+
+      <section id="usuarios" class="panel-section active">
+        <h1>Registrar usuario</h1>
+        <p>Registra a las personas o instituciones donantes.</p>
+      </section>
+
+      <section id="alimentos" class="panel-section">
+        <h1>Registrar alimento</h1>
+        <p>Registra los alimentos disponibles para donación.</p>
+
+        <form id="formAlimento">
+          <input type="text" id="nombreAlimento" placeholder="Nombre del alimento" required>
+          <input type="text" id="descripcionAlimento" placeholder="Descripción">
+          <input type="text" id="unidadMedida" placeholder="Unidad de medida" required>
+          <button type="submit">Guardar alimento</button>
+        </form>
+      </section>
+
+      <section id="donaciones" class="panel-section">
+        <h1>Registrar donación</h1>
+        <p>Relaciona un usuario con un alimento donado.</p>
+      </section>
+
+      <section id="registros" class="panel-section">
+        <h1>Ver registros</h1>
+        <p>Aquí se mostrarán usuarios, alimentos y donaciones registradas.</p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll(".panel-section");
+
+      secciones.forEach(seccion => {
+        seccion.classList.remove("active");
+      });
+
+      document.getElementById(id).classList.add("active");
+    }
+
+    function cerrarSesion() {
+      localStorage.removeItem("logueado");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

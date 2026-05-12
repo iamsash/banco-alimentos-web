@@ -1,0 +1,126 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+.panel-page {
+  margin: 0;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: #ff8c00;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* BOTONES MENÚ */
+.sidebar button {
+  background: white;
+  color: #ff8c00;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: #ffe0b3;
+}
+
+/* LOGOUT */
+.btn-logout {
+  margin-top: auto;
+  background: #333 !important;
+  color: white !important;
+}
+
+/* CONTENIDO */
+.panel-content {
+  flex: 1;
+  padding: 40px;
+  background: #f4f6f9;
+}
+
+/* SECCIONES */
+.panel-section {
+  display: none;
+}
+
+.panel-section.active {
+  display: block;
+}
+
+/* TITULOS */
+.panel-content h1 {
+  margin-bottom: 10px;
+}
+
+.panel-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* FORMULARIOS */
+form {
+  max-width: 400px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input:focus {
+  border-color: #ff8c00;
+  outline: none;
+}
+
+/* BOTÓN FORM */
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #e67600;
+}

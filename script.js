@@ -296,3 +296,36 @@ function cambiarImagenQuienesSomos() {
 // Cambiar imagen cada 4 segundos
 setInterval(cambiarImagenQuienesSomos, 4000);
 
+
+// login from
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("usuario").value;
+    const password = document.getElementById("contrasena").value;
+
+    try {
+        const response = await fetch("http://localhost:8080/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
+
+        if (response.ok) {
+            alert("Login correcto 🔥");
+            localStorage.setItem("logueado", "true");
+            window.location.href = "panel.html";
+        } else {
+            alert("Usuario o contraseña incorrectos ❌");
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Error al conectar con el servidor");
+    }
+});
