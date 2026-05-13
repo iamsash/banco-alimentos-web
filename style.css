@@ -367,6 +367,8 @@ body {
 /* =========================================================
    QUIÉNES SOMOS
 ========================================================= */
+
+
 .quienes-somos {
   width: 100%;
   padding: 60px 20px;
@@ -408,16 +410,13 @@ body {
   opacity: 0;
 }
 
-#quienes-somos .quienes-somos-title,
-
 .quienes-somos-title {
   color: #262522;
   margin-bottom: 20px;
   font-size: 28px;
 }
 
-.quienes-somos-info,
-#que-hacemos-info {
+.quienes-somos-info {
   border: 2px solid #007bff;
   border-radius: 18px;
   padding: 24px;
@@ -427,19 +426,16 @@ body {
   font-size: 1.1rem;
 }
 
-.quienes-somos-info p,
-#que-hacemos-info p {
+.quienes-somos-info p {
   margin-bottom: 18px;
 }
 
-.quienes-somos-info ol,
-#que-hacemos-info ol {
+.quienes-somos-info ol {
   padding-left: 28px;
   margin-top: 20px;
 }
 
-.quienes-somos-info li,
-#que-hacemos-info li {
+.quienes-somos-info li {
   margin-bottom: 16px;
   line-height: 1.8;
 }
@@ -454,28 +450,227 @@ body {
   width: 100%;
 }
 
+/* =========================
+   QUÉ HACEMOS
+========================= */
+
+#que-hacemos-info {
+  border: 2px solid #f0a000;
+  border-radius: 18px;
+  padding: 24px;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+#que-hacemos-info p {
+  margin-bottom: 18px;
+}
+
+#que-hacemos-info ol {
+  padding-left: 28px;
+  margin-top: 20px;
+}
+
+#que-hacemos-info li {
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+
 /* =========================================================
    mision y visión
 ========================================================= */
 
 
-#mision-vision .info-title {
-  background: #ff8c00;
-  color: #ffffff;
+/* =========================
+   MISIÓN Y VISIÓN
+========================= */
 
-  padding: 8px 0; /* un poco más equilibrado */
-  text-align: center;
-
-  width: 100%; /* 🔥 mejor que 100vw */
-  
-  margin-bottom: 30px;
-
-  border: none;
+#mision-vision {
+  padding: 60px 20px;
+  background: #f5f5f5;
 }
 
-/* 🔥 separación entre Misión y Visión */
-#mision-vision .info-box {
-  margin-bottom: 50px;
+#mision-vision .contenido {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.mision-vision-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.mision-vision-header h2 {
+  font-size: 42px;
+  color: #262522;
+  margin-bottom: 10px;
+}
+
+.mision-vision-header h2 span {
+  color: #ff6b00;
+}
+
+.linea-mv {
+  width: 70px;
+  height: 4px;
+  background: #ff6b00;
+  margin: 0 auto 18px auto;
+  border-radius: 20px;
+}
+
+.mision-vision-header p {
+  font-size: 17px;
+  color: #555;
+}
+
+.mision-vision-container {
+  width: 100%;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-bottom: 4px solid #ff6b00;
+}
+
+.vision-box {
+  grid-template-columns: 48% 52%;
+}
+
+.info-content {
+  position: relative;
+  padding: 55px 45px 40px 70px;
+}
+
+.icono-mv {
+  width: 75px;
+  height: 75px;
+  background: #ff6b00;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 35px;
+  font-size: 35px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  border: 6px solid #ffffff;
+}
+
+.info-content h2 {
+  color: #f05a00;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.info-content p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.imagen-mv-placeholder {
+  min-height: 310px;
+  background: #e8e8e8;
+  border: 3px dashed #bdbdbd;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.imagen-mv-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.impacto-mv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: #fff3e5;
+  padding: 25px 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.impacto-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.impacto-card span {
+  font-size: 38px;
+}
+
+.impacto-card h3 {
+  color: #ff6b00;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.impacto-card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE para mision y vision*/
+
+@media (max-width: 900px) {
+  .info-box,
+  .vision-box {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-box .imagen-mv-placeholder {
+    order: 2;
+  }
+
+  .vision-box .info-content {
+    order: 1;
+  }
+
+  .impacto-mv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mision-vision-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  #mision-vision {
+    padding: 40px 15px;
+  }
+
+  .info-content {
+    padding: 55px 25px 30px 25px;
+  }
+
+  .icono-mv {
+    left: 25px;
+  }
+
+  .impacto-mv {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -483,21 +678,162 @@ body {
 /* =========================================================
    QUÉ HACEMOS
 ========================================================= */
-#que-hacemos .que-hacemos-title {
-  background: #ff8c00;
-  color: #ffffff;
-
-  padding: 8px 0;
-  text-align: center;
-
-  width: 100%;
-  margin-bottom: 30px;
+.que-hacemos-section {
+    padding: 50px 6%;
+    background: #f7f7f7;
 }
 
-#que-hacemos .que-hacemos-title h2 {
-  margin: 0;
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
+.section-title h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #555;
+}
+
+.cards-acciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.accion-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.accion-card:hover {
+    transform: translateY(-8px);
+}
+
+.icono {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background: #ff8a00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.accion-card h3 {
+    color: #222;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.accion-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.imagen-placeholder {
+    height: 230px;
+    background: #e5e5e5;
+    border: 2px dashed #aaa;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.impacto {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.impacto h3 {
+    color: #ff8a00;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.impacto-grid h4 {
+    font-size: 34px;
+    color: #ff8a00;
+    margin-bottom: 8px;
+}
+
+.impacto-grid p {
+    font-size: 15px;
+    color: #555;
+}
+
+.video-box {
+    margin-top: 30px;
+}
+
+.video-placeholder {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), #ccc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-acciones,
+    .impacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-acciones,
+    .impacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
 /* =========================================================
    ALIADO
 ========================================================= */
@@ -2707,19 +3043,3 @@ body {
 
 
 
-@media (max-width: 480px) {
-  .contenedor-top nav ul,
-  .menu-blanco ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contenedor-top nav ul li a,
-  .menu-blanco ul li a {
-    font-size: 14px;
-  }
-
-  .logo img {
-    max-width: 170px;
-  }
-}
